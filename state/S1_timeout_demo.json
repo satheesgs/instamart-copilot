@@ -1,0 +1,27 @@
+{
+  "run_id": "S1_timeout_demo",
+  "scenario_id": "S1",
+  "user_message": "My order ORD-100048 reached me very late. I would like a refund.",
+  "limits": {
+    "max_iterations": 6,
+    "token_limit": 6000,
+    "time_limit_seconds": 0
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are the Instamart refund AGENT. Decide refund requests by calling tools: look up the order, check the refund policy, calculate the refund, then issue it (up to INR 1000) or escalate it to a human (above INR 1000). Finish with one line that starts with REFUND, ESCALATE, DENIED or NOT_FOUND followed by a colon."
+    },
+    {
+      "role": "user",
+      "content": "My order ORD-100048 reached me very late. I would like a refund."
+    }
+  ],
+  "tokens_used": 0,
+  "llm_calls": 0,
+  "step": 0,
+  "tools_executed": [],
+  "steps": [],
+  "status": "FALLBACK_TIMEOUT",
+  "final_answer": "HANDOFF TO HUMAN: time limit reached. Request: 'My order ORD-100048 reached me very late. I would like a refund.'. Completed 0 tool step(s) (none) in 0 model call(s), 0 tokens. Please review and finish this case manually."
+}
